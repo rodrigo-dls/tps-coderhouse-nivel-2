@@ -9,6 +9,7 @@ var operacionUsuario = prompt("Nombre la operacion que desea aplicar", "suma")
 
 var operaciones = ['suma', 'resta', 'multiplicacion', 'division']
 
+//Declaro mis funciones
 var sumar = function(a , b) {
 	return a + b
 } 
@@ -25,18 +26,33 @@ var dividir = function(a , b) {
 	return a / b
 } 
 
-//Proceso de la informacion
+
+//Proceso la informacion
 
 //con for
-var validarOperacion = function(listaOperaciones, operacionAValidar){
 
-	for (var i = 0; i < 4; i++){
-		console.log(listaOperaciones[i])
-		// if ( listaOperaciones[i] === operacionAValidar)
+var validarOperacion = function(listaOperaciones, operacionAValidar, a, b){
+	for (var i = 0; i <= listaOperaciones.length ; i++ ) {
+		// console.log(listaOperaciones[i])
+		if ( i < 4) {
+			if ( listaOperaciones[i] === operacionAValidar) {
+				var arrayFunciones = [sumar, restar, multiplicar, dividir]
+				return arrayFunciones[i](a , b)			
+			}
+		} else {
+				operacionAValidar = prompt('Eso no es una operacion, lo siento. Intenta de nuevo')
+				operacionUsuario = operacionAValidar
+				i = 0
 		}
+	}
 }
 
-validarOperacion(operaciones, operacionUsuario)
+//Muestro el resultado
+var resultado = validarOperacion(operaciones, operacionUsuario, num1, num2)
+
+console.log('El resultado de la ' + operacionUsuario + ' es: ' + resultado)
+
+
 
 //con switch
 
