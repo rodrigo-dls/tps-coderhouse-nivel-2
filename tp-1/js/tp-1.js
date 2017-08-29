@@ -12,10 +12,10 @@ var multiplicar = primerNumero * segundoNumero
 
 var dividir = primerNumero / segundoNumero
 
-alert(sumar)
+alert("La suma es: "+sumar)
 
-alert(restar)
+alert("La diferencia es: "+restar)
 
-alert(multiplicar)
+alert("El producto es: "+multiplicar)
 
-alert(dividir)
+alert("El cociente es: "+dividir)
