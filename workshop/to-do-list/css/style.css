@@ -1,0 +1,38 @@
+body{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#formulario{
+	background-color: #98EC94;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.container{
+	display: flex;
+	margin: 5px;
+}
+
+.button{
+	justify-content: center;
+}
+
+#formulario input,
+#formulario button,
+#formulario textarea{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border-radius: 5px;
+}
+
+#lista-tareas{
+	list-style: none;
+	background-color: darkseagreen;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.item-lista-container{
+	background-color: cadetblue;
+	min-height: 40px;
+	border-radius: 5px;
+}
