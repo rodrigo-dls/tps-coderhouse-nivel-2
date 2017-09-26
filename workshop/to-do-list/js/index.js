@@ -4,6 +4,24 @@ console.log("creando la ToDoList")
 
 */
 	var tareasArr = [] //Ya no se cargan mas en este array, ahora se cargan en el localStorage
+var tareasActuales = (function(){
+	for (var i = 0; i < localStorage.length; i++)	{
+		var id = localStorage.key(i)
+		var tit = JSON.parse(localStorage.getItem(id)).titulo
+		var descr = JSON.parse(localStorage.getItem(id)).descripcion
+		var estado = JSON.parse(localStorage.getItem(id)).estado
+		var listaTareas = document.getElementById("lista-tareas")
+		var nuevoNodo = document.createElement("li")
+		nuevoNodo.innerHTML = '<div class="item-lista-container">\
+			<input type="checkbox" name="estado" id="' + estado  + '">\
+			<h2 class="item-lista-titulo">' + tit + '</h2>\
+			<p class="item-lista-descr">' + descr + '</p>\
+			<i class="fa fa-times basura" aria-hidden="true"></i>\
+			<i class="fa fa-pencil-square editor" aria-hidden="true"></i>\
+		</div>'
+		listaTareas.appendChild(nuevoNodo)
+	}
+})()
 
 //Modulo ToDoList, aca voy a ir metiendo mis progresos paso a paso, mejor probar afuera, validar y despues meter
 var ToDoList = (function(){
@@ -44,13 +62,15 @@ var ToDoList = (function(){
  		//Funcion que agrega la tarea creada al HTML
 		var mostrarTarea = function(tit, descr, estado){
 			var listaTareas = document.getElementById("lista-tareas")
-			listaTareas.innerHTML = '<li class="item-lista-container">\
+			var nuevoNodo = document.createElement("li")
+			nuevoNodo.innerHTML = '<div class="item-lista-container">\
 				<input type="checkbox" name="estado" id="' + estado  + '">\
 				<h2 class="item-lista-titulo">' + tit + '</h2>\
 				<p class="item-lista-descr">' + descr + '</p>\
-				<span class="basura"></span>\
-				<span class="editor"></span>\
-			</li>'
+				<i class="fa fa-times basura" aria-hidden="true"></i>\
+				<i class="fa fa-pencil-square editor" aria-hidden="true"></i>\
+			</div>'
+			listaTareas.appendChild(nuevoNodo)
 			console.log("Se creo un nodo nuevo con la tarea creada.")
 		}
  
@@ -67,6 +87,13 @@ var ToDoList = (function(){
 			var estadoLS = JSON.parse(localStorage.getItem(tarea.id)).estado
 			mostrarTarea(titLS, descrLS, estadoLS)
 			event.preventDefault();	
+
+		}
+
+		//Funcion que edita el contenido texto de un nodo, sin terminar
+		var editar = function(string){
+			var textoOriginal = string
+			var textoEditado = string
 
 		}
 

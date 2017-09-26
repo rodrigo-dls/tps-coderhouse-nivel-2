@@ -2,14 +2,14 @@
 
 ## Consigna:
 
-* Crear el modulo ToDoList
-* El modulo debera tener los metodos necesarios para Agregar, Editar, Mostrar Todos, Buscar y Eliminar.
-* Una tarea contiene las siguientes propiedades: id, titulo, descripcion y completado
-* Se tiene que poder editar titulo y descripcion de una tarea
-* Cambiar a estado completado y descompletado(?) una tarea
-* Eliminar una tarea o todas las tareas
-* Ordernar por A-Z y Z-A las tareas ya sea por titulo como por ID
-* Las tareas Deberan quedar persistidas mediante localstorage y poder mostrarse en caso de recargar el browserCrear el modulo ToDoList
+[x] Crear el modulo ToDoList
+[] El modulo debera tener los metodos necesarios para Agregar, Editar, Mostrar Todos, Buscar y Eliminar.
+[x] Una tarea contiene las siguientes propiedades: id, titulo, descripcion y completado
+[] Se tiene que poder editar titulo y descripcion de una tarea
+[] Cambiar a estado completado y descompletado(?) una tarea
+[] Eliminar una tarea o todas las tareas
+[] Ordernar por A-Z y Z-A las tareas ya sea por titulo como por ID
+[] Las tareas Deberan quedar persistidas mediante localstorage y poder mostrarse en caso de recargar el browser
 
 
 ## A pensar...
